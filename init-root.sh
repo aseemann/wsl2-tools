@@ -1,6 +1,4 @@
-#!/usr/bin/bash
-
-#echo -e "Init WSL2\n"
+#!/usr/bin/env bash
 
 if [ ! -d /run/screen ]; then
     echo -e "Create screen session directory"
@@ -15,7 +13,6 @@ if [ ! -S /var/run/docker.sock ]; then
 fi
 
 if [ -f /var/run/crond.pid ]; then
+    echo -e "Start cron daemon"
     cron
 fi
-
-#echo -e "WSL2 initialized\n"
