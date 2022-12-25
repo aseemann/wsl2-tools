@@ -25,7 +25,7 @@ fi
 
 unset env
 
-fi [ -f ${SSH_PRIVATE_KEY} ]; then
+if [ -f ${SSH_PRIVATE_KEY} ] && [ ! -z ${SSH_PRIVATE_KEY} ]; then
     ssh-add -l | grep ${SSH_PRIVATE_KEY} > /dev/null
     if [ $? == 1 ]; then
         ssh-add ${SSH_PRIVATE_KEY}
