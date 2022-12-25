@@ -45,4 +45,4 @@ echo "${HOME}"
 
 msg "Add init script to ~/.bashrc"
 cp ${HOME}/.bashrc ${HOME}/.bashrc.old
-echo "${HOME}/wsl2-tools/init.sh" >> ${HOME}/.bashrc 
+echo "source ${HOME}/wsl2-tools/init.sh" >> ${HOME}/.bashrc 
