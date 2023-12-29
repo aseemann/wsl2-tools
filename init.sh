@@ -32,3 +32,6 @@ if [ -f ${SSH_PRIVATE_KEY} ] && [ ! -z ${SSH_PRIVATE_KEY} ]; then
         ssh-add ${SSH_PRIVATE_KEY}
     fi
 fi
+
+
+export WSL_HOST_IP="$(grep nameserver /etc/resolv.conf | cut -d ' ' -f2)"

@@ -38,7 +38,7 @@ if [ ! -z "${SUDO_USER}" ]; then
         msg "Add sudoers entry"
         echo "${SUDO_USER}    ALL=(ALL:ALL) NOPASSWD: /home/${SUDO_USER}/wsl2-tools/init-root.sh" > /etc/sudoers.d/wsl2-init-${SUDO_USER}
     fi
-    chmod o-rwx/etc/sudoers.d/wsl2-init-${SUDO_USER}
+    chmod o-rwx /etc/sudoers.d/wsl2-init-${SUDO_USER}
 fi
 
 echo "${HOME}"

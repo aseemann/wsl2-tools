@@ -12,7 +12,7 @@ if [ ! -S /var/run/docker.sock ]; then
     /etc/init.d/docker start
 fi
 
-if [ -f /var/run/crond.pid ]; then
+if [ ! -f /var/run/crond.pid ]; then
     echo -e "Start cron daemon"
     cron
 fi
